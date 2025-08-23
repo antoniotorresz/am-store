@@ -17,8 +17,10 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-boot.version>3.2.0</spring-boot.version>
-        <spring-cloud.version>2023.0.0</spring-cloud.version>
+<!--        <spring-boot.version>3.1.0</spring-boot.version>  &lt;!&ndash; CAMBIADO &ndash;&gt;-->
+<!--        <spring-cloud.version>2022.0.0</spring-cloud.version>  &lt;!&ndash; CAMBIADO &ndash;&gt;-->
+        <spring-boot.version>3.0.6</spring-boot.version>  <!-- COMPATIBLE -->
+        <spring-cloud.version>2022.0.0</spring-cloud.version>  <!-- COMPATIBLE -->
         <mysql.version>8.0.33</mysql.version>
     </properties>
 
@@ -80,11 +82,11 @@
                 <version>${spring-boot.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-gateway</artifactId>
-                <version>${spring-cloud.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-starter-gateway</artifactId>-->
+<!--                <version>${spring-cloud.version}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
