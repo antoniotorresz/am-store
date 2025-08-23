@@ -23,9 +23,9 @@
     </properties>
 
     <modules>
-        <!-- <module>gateway</module> -->
+        <module>discovery-server</module>
         <module>ms-operator</module>
-        <!-- <module>ms-search</module> -->
+         <module>api-gateway</module>
     </modules>
 
     <dependencyManagement>
