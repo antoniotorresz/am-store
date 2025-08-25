@@ -33,149 +33,362 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.6)
 
-2025-08-24T18:55:29.250-06:00  INFO 509574 --- [           main] c.unir.apigateway.ApiGatewayApplication  : Starting ApiGatewayApplication using Java 21.0.7 with PID 509574 (/home/antonio/Documents/repos/am-store/backend/amstore/api-gateway/target/classes started by antonio in /home/antonio/Documents/repos/am-store/backend/amstore/api-gateway)
-2025-08-24T18:55:29.253-06:00  INFO 509574 --- [           main] c.unir.apigateway.ApiGatewayApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-08-24T18:55:30.347-06:00  INFO 509574 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f5ab7407-fa05-3635-8da2-a124b3e053a7
-2025-08-24T18:55:30.438-06:00  INFO 509574 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2025-08-24T18:55:30.439-06:00  INFO 509574 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2025-08-24T18:55:30.441-06:00  INFO 509574 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2025-08-24T18:55:30.602-06:00  INFO 509574 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-08-24T18:55:30.611-06:00  INFO 509574 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-08-24T18:55:30.612-06:00  INFO 509574 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2025-08-24T18:55:31.302-06:00 DEBUG 509574 --- [           main] o.s.c.gateway.config.GatewayProperties   : Routes supplied from Gateway Properties: [RouteDefinition{id='operator-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/**}}], filters=[], uri=lb://ms-operator, order=0, metadata={}}, RouteDefinition{id='search-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/v1/search/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}}}], uri=lb://ms-searcher, order=0, metadata={}}]
-2025-08-24T18:55:31.438-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
-2025-08-24T18:55:31.438-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
-2025-08-24T18:55:31.438-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
-2025-08-24T18:55:31.438-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
-2025-08-24T18:55:31.439-06:00  INFO 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2025-08-24T18:55:31.659-06:00  INFO 509574 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-08-24T18:55:31.673-06:00 DEBUG 509574 --- [           main] .n.e.m.DefaultManagementMetadataProvider : Constructed eureka meta-data healthcheckUrl: http://192.168.1.77:8080/actuator/health
-2025-08-24T18:55:31.673-06:00 DEBUG 509574 --- [           main] .n.e.m.DefaultManagementMetadataProvider : Constructed eureka meta-data statusPageUrl: http://192.168.1.77:8080/actuator/info
-2025-08-24T18:55:31.709-06:00  WARN 509574 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-08-24T18:55:31.743-06:00  INFO 509574 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-08-24T18:55:31.863-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-08-24T18:55:31.868-06:00  INFO 509574 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-08-24T18:55:31.886-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-08-24T18:55:31.886-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-08-24T18:55:31.886-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-08-24T18:55:31.886-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-08-24T18:55:31.886-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-08-24T18:55:31.886-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-08-24T18:55:31.886-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-08-24T18:55:32.203-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-08-24T18:55:32.206-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-08-24T18:55:32.209-06:00  INFO 509574 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-08-24T18:55:32.214-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1756083332213 with initial instances count: 2
-2025-08-24T18:55:32.216-06:00  INFO 509574 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
-2025-08-24T18:55:32.217-06:00  INFO 509574 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1756083332216, current=UP, previous=STARTING]
-2025-08-24T18:55:32.218-06:00  INFO 509574 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fedora:api-gateway:8080: registering service...
-2025-08-24T18:55:32.260-06:00  INFO 509574 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fedora:api-gateway:8080 - registration status: 204
-2025-08-24T18:55:32.277-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
-2025-08-24T18:55:32.296-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:55:32.304-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
-2025-08-24T18:55:32.304-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
-2025-08-24T18:55:32.306-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:55:32.307-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
-2025-08-24T18:55:32.307-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/**} to Path
-2025-08-24T18:55:32.308-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
-2025-08-24T18:55:32.308-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
-2025-08-24T18:55:32.309-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
-2025-08-24T18:55:32.310-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
-2025-08-24T18:55:32.329-06:00  INFO 509574 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-08-24T18:55:32.329-06:00  INFO 509574 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
-2025-08-24T18:55:32.339-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
-2025-08-24T18:55:32.340-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:55:32.341-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
-2025-08-24T18:55:32.341-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
-2025-08-24T18:55:32.342-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:55:32.343-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
-2025-08-24T18:55:32.343-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/**} to Path
-2025-08-24T18:55:32.344-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
-2025-08-24T18:55:32.344-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
-2025-08-24T18:55:32.345-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
-2025-08-24T18:55:32.346-06:00 DEBUG 509574 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
-2025-08-24T18:55:32.351-06:00  INFO 509574 --- [           main] c.unir.apigateway.ApiGatewayApplication  : Started ApiGatewayApplication in 3.532 seconds (process running for 3.889)
-2025-08-24T18:56:02.221-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
-2025-08-24T18:56:02.223-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:56:02.224-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
-2025-08-24T18:56:02.224-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
-2025-08-24T18:56:02.225-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:56:02.226-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
-2025-08-24T18:56:02.227-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
-2025-08-24T18:56:02.228-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:56:02.229-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
-2025-08-24T18:56:02.229-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/**} to Path
-2025-08-24T18:56:02.230-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
-2025-08-24T18:56:02.230-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
-2025-08-24T18:56:02.231-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
-2025-08-24T18:56:02.232-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
-2025-08-24T18:56:12.920-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: operator-service
-2025-08-24T18:56:12.920-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: GET http://localhost:8080/api/v1/search/products?query=test] to Route{id='operator-service', uri=lb://ms-operator, order=0, predicate=Paths: [/api/**], match trailing slash: true, gatewayFilters=[], metadata={}}
-2025-08-24T18:56:12.920-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.h.RoutePredicateHandlerMapping   : [70c60cfd] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@7e01ec95
-2025-08-24T18:56:12.921-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@4a89ef44}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@7459a21e}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@a0bf272}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@4971f459}, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@310a7859}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter@58f31629}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.LoadBalancerServiceInstanceCookieFilter@124d26ba}, order = 10151], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@4c07d1fc}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@415d88de}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@1cbc1dde}, order = 2147483647]]
-2025-08-24T18:56:12.974-06:00 DEBUG 509574 --- [nio-8080-exec-2] .l.EurekaLoadBalancerClientConfiguration : Setting the value of 'spring.cloud.loadbalancer.zone' to defaultZone
-2025-08-24T18:56:12.986-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
-2025-08-24T18:56:12.987-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:56:12.988-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
-2025-08-24T18:56:12.989-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
-2025-08-24T18:56:12.990-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:56:12.991-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
-2025-08-24T18:56:12.992-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
-2025-08-24T18:56:12.993-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:56:12.995-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
-2025-08-24T18:56:12.995-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/**} to Path
-2025-08-24T18:56:12.996-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
-2025-08-24T18:56:12.996-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
-2025-08-24T18:56:12.997-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
-2025-08-24T18:56:12.998-06:00 DEBUG 509574 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
-2025-08-24T18:56:32.242-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
-2025-08-24T18:56:32.243-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:56:32.244-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
-2025-08-24T18:56:32.244-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
-2025-08-24T18:56:32.245-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:56:32.246-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
-2025-08-24T18:56:32.246-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
-2025-08-24T18:56:32.247-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:56:32.247-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
-2025-08-24T18:56:32.247-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/**} to Path
-2025-08-24T18:56:32.248-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
-2025-08-24T18:56:32.248-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
-2025-08-24T18:56:32.249-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
-2025-08-24T18:56:32.249-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
-2025-08-24T18:57:02.259-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
-2025-08-24T18:57:02.261-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:57:02.261-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
-2025-08-24T18:57:02.262-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
-2025-08-24T18:57:02.262-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:57:02.263-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
-2025-08-24T18:57:02.264-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
-2025-08-24T18:57:02.265-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:57:02.265-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
-2025-08-24T18:57:02.266-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/**} to Path
-2025-08-24T18:57:02.267-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
-2025-08-24T18:57:02.267-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
-2025-08-24T18:57:02.268-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
-2025-08-24T18:57:02.269-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
-2025-08-24T18:57:32.279-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
-2025-08-24T18:57:32.280-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:57:32.281-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
-2025-08-24T18:57:32.281-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
-2025-08-24T18:57:32.282-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:57:32.283-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
-2025-08-24T18:57:32.284-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
-2025-08-24T18:57:32.285-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
-2025-08-24T18:57:32.286-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
-2025-08-24T18:57:32.286-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/**} to Path
-2025-08-24T18:57:32.287-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
-2025-08-24T18:57:32.287-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
-2025-08-24T18:57:32.288-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
-2025-08-24T18:57:32.289-06:00 DEBUG 509574 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
+2025-08-24T19:06:14.128-06:00  INFO 516744 --- [           main] c.unir.apigateway.ApiGatewayApplication  : Starting ApiGatewayApplication using Java 21.0.7 with PID 516744 (/home/antonio/Documents/repos/am-store/backend/amstore/api-gateway/target/classes started by antonio in /home/antonio/Documents/repos/am-store/backend/amstore/api-gateway)
+2025-08-24T19:06:14.131-06:00  INFO 516744 --- [           main] c.unir.apigateway.ApiGatewayApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T19:06:15.001-06:00  INFO 516744 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f5ab7407-fa05-3635-8da2-a124b3e053a7
+2025-08-24T19:06:15.079-06:00  INFO 516744 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-24T19:06:15.081-06:00  INFO 516744 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-24T19:06:15.082-06:00  INFO 516744 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-24T19:06:15.241-06:00  INFO 516744 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-08-24T19:06:15.251-06:00  INFO 516744 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-24T19:06:15.251-06:00  INFO 516744 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2025-08-24T19:06:15.916-06:00 DEBUG 516744 --- [           main] o.s.c.gateway.config.GatewayProperties   : Routes supplied from Gateway Properties: [RouteDefinition{id='operator-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/v1/products/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/api/v1/products/(?<segment>.*), _genkey_1=/api/v1/products/${segment}}}], uri=lb://ms-operator, order=0, metadata={}}, RouteDefinition{id='search-service', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/v1/search/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}}}], uri=lb://ms-searcher, order=0, metadata={}}]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-08-24T19:06:16.061-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-08-24T19:06:16.062-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-08-24T19:06:16.062-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-08-24T19:06:16.062-06:00  INFO 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-08-24T19:06:16.310-06:00  INFO 516744 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-08-24T19:06:16.324-06:00 DEBUG 516744 --- [           main] .n.e.m.DefaultManagementMetadataProvider : Constructed eureka meta-data healthcheckUrl: http://192.168.1.77:8080/actuator/health
+2025-08-24T19:06:16.324-06:00 DEBUG 516744 --- [           main] .n.e.m.DefaultManagementMetadataProvider : Constructed eureka meta-data statusPageUrl: http://192.168.1.77:8080/actuator/info
+2025-08-24T19:06:16.357-06:00  WARN 516744 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-24T19:06:16.381-06:00  INFO 516744 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-08-24T19:06:16.499-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-08-24T19:06:16.503-06:00  INFO 516744 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-24T19:06:16.521-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-08-24T19:06:16.521-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-08-24T19:06:16.522-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-08-24T19:06:16.522-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-08-24T19:06:16.522-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-08-24T19:06:16.522-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-08-24T19:06:16.522-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-08-24T19:06:16.831-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-08-24T19:06:16.833-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-08-24T19:06:16.835-06:00  INFO 516744 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-08-24T19:06:16.840-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1756083976840 with initial instances count: 0
+2025-08-24T19:06:16.842-06:00  INFO 516744 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2025-08-24T19:06:16.843-06:00  INFO 516744 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1756083976843, current=UP, previous=STARTING]
+2025-08-24T19:06:16.845-06:00  INFO 516744 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fedora:api-gateway:8080: registering service...
+2025-08-24T19:06:16.882-06:00  INFO 516744 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fedora:api-gateway:8080 - registration status: 204
+2025-08-24T19:06:16.886-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/v1/products/**} to Path
+2025-08-24T19:06:16.903-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying filter {_genkey_0=/api/v1/products/(?<segment>.*), _genkey_1=/api/v1/products/${segment}} to RewritePath
+2025-08-24T19:06:16.911-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
+2025-08-24T19:06:16.912-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
+2025-08-24T19:06:16.913-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
+2025-08-24T19:06:16.914-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
+2025-08-24T19:06:16.930-06:00  INFO 516744 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-08-24T19:06:16.931-06:00  INFO 516744 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-08-24T19:06:16.940-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/v1/products/**} to Path
+2025-08-24T19:06:16.941-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying filter {_genkey_0=/api/v1/products/(?<segment>.*), _genkey_1=/api/v1/products/${segment}} to RewritePath
+2025-08-24T19:06:16.942-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
+2025-08-24T19:06:16.942-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
+2025-08-24T19:06:16.943-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
+2025-08-24T19:06:16.943-06:00 DEBUG 516744 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
+2025-08-24T19:06:16.947-06:00  INFO 516744 --- [           main] c.unir.apigateway.ApiGatewayApplication  : Started ApiGatewayApplication in 3.257 seconds (process running for 3.601)
+2025-08-24T19:06:46.833-06:00  INFO 516744 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-08-24T19:06:46.833-06:00  INFO 516744 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-08-24T19:06:46.833-06:00  INFO 516744 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-08-24T19:06:46.833-06:00  INFO 516744 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-08-24T19:06:46.833-06:00  INFO 516744 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-08-24T19:06:46.833-06:00  INFO 516744 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-08-24T19:06:46.833-06:00  INFO 516744 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-08-24T19:06:46.855-06:00  INFO 516744 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-08-24T19:06:46.867-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
+2025-08-24T19:06:46.868-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:06:46.869-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
+2025-08-24T19:06:46.869-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
+2025-08-24T19:06:46.870-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:06:46.871-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
+2025-08-24T19:06:46.872-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
+2025-08-24T19:06:46.873-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:06:46.873-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
+2025-08-24T19:06:46.873-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/v1/products/**} to Path
+2025-08-24T19:06:46.874-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying filter {_genkey_0=/api/v1/products/(?<segment>.*), _genkey_1=/api/v1/products/${segment}} to RewritePath
+2025-08-24T19:06:46.875-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
+2025-08-24T19:06:46.875-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
+2025-08-24T19:06:46.876-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
+2025-08-24T19:06:46.877-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
+2025-08-24T19:06:57.781-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: search-service
+2025-08-24T19:06:57.784-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: GET http://localhost:8080/api/v1/search/products?query=test] to Route{id='search-service', uri=lb://ms-searcher, order=0, predicate=Paths: [/api/v1/search/**], match trailing slash: true, gatewayFilters=[[[RewritePath /api/v1/search/(?<segment>.*) = '/api/v1/search/${segment}'], order = 1]], metadata={}}
+2025-08-24T19:06:57.784-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.h.RoutePredicateHandlerMapping   : [3f05c63c] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@27ee13b2
+2025-08-24T19:06:57.784-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@2eada095}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@58eac00e}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@4c07d1fc}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@66ec4409}, order = 0], [[RewritePath /api/v1/search/(?<segment>.*) = '/api/v1/search/${segment}'], order = 1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@52831a73}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter@310a7859}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.LoadBalancerServiceInstanceCookieFilter@1cbc1dde}, order = 10151], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@2506e949}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@4971f459}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@1416ff46}, order = 2147483647]]
+2025-08-24T19:06:57.826-06:00 DEBUG 516744 --- [nio-8080-exec-2] .l.EurekaLoadBalancerClientConfiguration : Setting the value of 'spring.cloud.loadbalancer.zone' to defaultZone
+2025-08-24T19:06:57.835-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
+2025-08-24T19:06:57.836-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:06:57.837-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
+2025-08-24T19:06:57.838-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
+2025-08-24T19:06:57.839-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:06:57.840-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
+2025-08-24T19:06:57.840-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
+2025-08-24T19:06:57.841-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:06:57.842-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
+2025-08-24T19:06:57.842-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/v1/products/**} to Path
+2025-08-24T19:06:57.843-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying filter {_genkey_0=/api/v1/products/(?<segment>.*), _genkey_1=/api/v1/products/${segment}} to RewritePath
+2025-08-24T19:06:57.844-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
+2025-08-24T19:06:57.845-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
+2025-08-24T19:06:57.846-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
+2025-08-24T19:06:57.847-06:00 DEBUG 516744 --- [nio-8080-exec-2] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
+2025-08-24T19:07:04.714-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: operator-service
+2025-08-24T19:07:04.715-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: GET http://localhost:8080/api/v1/products/2] to Route{id='operator-service', uri=lb://ms-operator, order=0, predicate=Paths: [/api/v1/products/**], match trailing slash: true, gatewayFilters=[[[RewritePath /api/v1/products/(?<segment>.*) = '/api/v1/products/${segment}'], order = 1]], metadata={}}
+2025-08-24T19:07:04.715-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.h.RoutePredicateHandlerMapping   : [2844677c] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@27ee13b2
+2025-08-24T19:07:04.715-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@2eada095}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@58eac00e}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@4c07d1fc}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@66ec4409}, order = 0], [[RewritePath /api/v1/products/(?<segment>.*) = '/api/v1/products/${segment}'], order = 1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@52831a73}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter@310a7859}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.LoadBalancerServiceInstanceCookieFilter@1cbc1dde}, order = 10151], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@2506e949}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@4971f459}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@1416ff46}, order = 2147483647]]
+2025-08-24T19:07:04.741-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
+2025-08-24T19:07:04.742-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:07:04.743-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
+2025-08-24T19:07:04.743-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
+2025-08-24T19:07:04.744-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:07:04.745-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
+2025-08-24T19:07:04.745-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
+2025-08-24T19:07:04.746-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:07:04.747-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
+2025-08-24T19:07:04.747-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/v1/products/**} to Path
+2025-08-24T19:07:04.748-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying filter {_genkey_0=/api/v1/products/(?<segment>.*), _genkey_1=/api/v1/products/${segment}} to RewritePath
+2025-08-24T19:07:04.748-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
+2025-08-24T19:07:04.749-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
+2025-08-24T19:07:04.749-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
+2025-08-24T19:07:04.750-06:00 DEBUG 516744 --- [nio-8080-exec-4] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
+2025-08-24T19:07:08.824-06:00 DEBUG 516744 --- [nio-8080-exec-6] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: operator-service
+2025-08-24T19:07:08.825-06:00 DEBUG 516744 --- [nio-8080-exec-6] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: GET http://localhost:8080/api/v1/products] to Route{id='operator-service', uri=lb://ms-operator, order=0, predicate=Paths: [/api/v1/products/**], match trailing slash: true, gatewayFilters=[[[RewritePath /api/v1/products/(?<segment>.*) = '/api/v1/products/${segment}'], order = 1]], metadata={}}
+2025-08-24T19:07:08.825-06:00 DEBUG 516744 --- [nio-8080-exec-6] o.s.c.g.h.RoutePredicateHandlerMapping   : [48b96446] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@27ee13b2
+2025-08-24T19:07:08.825-06:00 DEBUG 516744 --- [nio-8080-exec-6] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@2eada095}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@58eac00e}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@4c07d1fc}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@66ec4409}, order = 0], [[RewritePath /api/v1/products/(?<segment>.*) = '/api/v1/products/${segment}'], order = 1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@52831a73}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter@310a7859}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.LoadBalancerServiceInstanceCookieFilter@1cbc1dde}, order = 10151], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@2506e949}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@4971f459}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@1416ff46}, order = 2147483647]]
+2025-08-24T19:07:12.922-06:00 DEBUG 516744 --- [nio-8080-exec-8] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: search-service
+2025-08-24T19:07:12.922-06:00 DEBUG 516744 --- [nio-8080-exec-8] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: GET http://localhost:8080/api/v1/search/products?query=nike] to Route{id='search-service', uri=lb://ms-searcher, order=0, predicate=Paths: [/api/v1/search/**], match trailing slash: true, gatewayFilters=[[[RewritePath /api/v1/search/(?<segment>.*) = '/api/v1/search/${segment}'], order = 1]], metadata={}}
+2025-08-24T19:07:12.923-06:00 DEBUG 516744 --- [nio-8080-exec-8] o.s.c.g.h.RoutePredicateHandlerMapping   : [39a642e4] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@27ee13b2
+2025-08-24T19:07:12.923-06:00 DEBUG 516744 --- [nio-8080-exec-8] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@2eada095}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@58eac00e}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@4c07d1fc}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@66ec4409}, order = 0], [[RewritePath /api/v1/search/(?<segment>.*) = '/api/v1/search/${segment}'], order = 1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@52831a73}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter@310a7859}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.LoadBalancerServiceInstanceCookieFilter@1cbc1dde}, order = 10151], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@2506e949}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@4971f459}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@1416ff46}, order = 2147483647]]
+2025-08-24T19:07:16.887-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
+2025-08-24T19:07:16.888-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:07:16.889-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
+2025-08-24T19:07:16.889-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
+2025-08-24T19:07:16.890-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:07:16.891-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
+2025-08-24T19:07:16.891-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
+2025-08-24T19:07:16.892-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:07:16.893-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
+2025-08-24T19:07:16.893-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/v1/products/**} to Path
+2025-08-24T19:07:16.894-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying filter {_genkey_0=/api/v1/products/(?<segment>.*), _genkey_1=/api/v1/products/${segment}} to RewritePath
+2025-08-24T19:07:16.895-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
+2025-08-24T19:07:16.895-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
+2025-08-24T19:07:16.896-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
+2025-08-24T19:07:16.897-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
+2025-08-24T19:07:46.907-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying {pattern=/ms-searcher/**} to Path
+2025-08-24T19:07:46.909-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-SEARCHER applying filter {regexp=/ms-searcher/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:07:46.910-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-SEARCHER
+2025-08-24T19:07:46.910-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying {pattern=/api-gateway/**} to Path
+2025-08-24T19:07:46.911-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_API-GATEWAY applying filter {regexp=/api-gateway/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:07:46.912-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_API-GATEWAY
+2025-08-24T19:07:46.912-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying {pattern=/ms-operator/**} to Path
+2025-08-24T19:07:46.913-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition ReactiveCompositeDiscoveryClient_MS-OPERATOR applying filter {regexp=/ms-operator/?(?<remaining>.*), replacement=/${remaining}} to RewritePath
+2025-08-24T19:07:46.914-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: ReactiveCompositeDiscoveryClient_MS-OPERATOR
+2025-08-24T19:07:46.914-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying {_genkey_0=/api/v1/products/**} to Path
+2025-08-24T19:07:46.915-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition operator-service applying filter {_genkey_0=/api/v1/products/(?<segment>.*), _genkey_1=/api/v1/products/${segment}} to RewritePath
+2025-08-24T19:07:46.916-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: operator-service
+2025-08-24T19:07:46.916-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying {_genkey_0=/api/v1/search/**} to Path
+2025-08-24T19:07:46.917-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition search-service applying filter {_genkey_0=/api/v1/search/(?<segment>.*), _genkey_1=/api/v1/search/${segment}} to RewritePath
+2025-08-24T19:07:46.917-06:00 DEBUG 516744 --- [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: search-service
+2025-08-24T19:07:57.226-06:00  INFO 516744 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application API-GATEWAY with eureka with status DOWN
+2025-08-24T19:07:57.227-06:00  INFO 516744 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1756084077227, current=DOWN, previous=UP]
+2025-08-24T19:07:57.227-06:00  INFO 516744 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fedora:api-gateway:8080: registering service...
+2025-08-24T19:07:57.249-06:00  INFO 516744 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fedora:api-gateway:8080 - registration status: 204
+2025-08-24T19:07:59.298-06:00  INFO 516744 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-08-24T19:08:02.300-06:00  INFO 516744 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-08-24T19:08:02.306-06:00  INFO 516744 --- [ionShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY/fedora:api-gateway:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY/fedora:api-gateway:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:192)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:185)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:201)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 37 more
+
+2025-08-24T19:08:02.306-06:00  WARN 516744 --- [ionShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY/fedora:api-gateway:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-08-24T19:08:02.309-06:00  INFO 516744 --- [ionShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY/fedora:api-gateway:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY/fedora:api-gateway:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:192)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:185)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:201)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 38 more
+
+2025-08-24T19:08:02.309-06:00  WARN 516744 --- [ionShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY/fedora:api-gateway:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-08-24T19:08:02.310-06:00 ERROR 516744 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fedora:api-gateway:8080 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:192) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:185) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.0.0.jar:4.0.0]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.0.0.jar:4.0.0]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:201) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182) ~[spring-beans-6.0.8.jar:6.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084) ~[spring-context-6.0.8.jar:6.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053) ~[spring-context-6.0.8.jar:6.0.8]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149) ~[spring-boot-3.0.6.jar:3.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003) ~[spring-context-6.0.8.jar:6.0.8]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139) ~[spring-boot-3.0.6.jar:3.0.6]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108) ~[spring-boot-3.0.6.jar:3.0.6]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-08-24T19:08:02.317-06:00  INFO 516744 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

@@ -49,6 +49,7 @@ kill_port() {
 }
 
 # Detener servicios previos
+./end.sh
 echo -e "${CYAN}🔧 Limpiando servicios previos...${NC}"
 kill_port 8761 "Eureka"
 kill_port 8080 "Gateway"
