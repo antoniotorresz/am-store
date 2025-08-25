@@ -28,6 +28,7 @@
         <module>discovery-server</module>
         <module>ms-operator</module>
          <module>api-gateway</module>
+        <module>ms-searcher</module>
     </modules>
 
     <dependencyManagement>
