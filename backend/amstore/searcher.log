@@ -1,0 +1,90 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.unir:ms-searcher >------------------------
+[INFO] Building MS Searcher 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.0.6:run (default-cli) > test-compile @ ms-searcher >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-searcher ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ ms-searcher ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-searcher ---
+[INFO] skip non existing resourceDirectory /home/antonio/Documents/repos/am-store/backend/amstore/ms-searcher/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ ms-searcher ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.0.6:run (default-cli) < test-compile @ ms-searcher <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.0.6:run (default-cli) @ ms-searcher ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.6)
+
+2025-08-24T18:55:21.514-06:00  INFO 509395 --- [           main] c.unir.mssearcher.MsSearcherApplication  : Starting MsSearcherApplication using Java 21.0.7 with PID 509395 (/home/antonio/Documents/repos/am-store/backend/amstore/ms-searcher/target/classes started by antonio in /home/antonio/Documents/repos/am-store/backend/amstore/ms-searcher)
+2025-08-24T18:55:21.517-06:00 DEBUG 509395 --- [           main] c.unir.mssearcher.MsSearcherApplication  : Running with Spring Boot v3.0.6, Spring v6.0.8
+2025-08-24T18:55:21.518-06:00  INFO 509395 --- [           main] c.unir.mssearcher.MsSearcherApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T18:55:22.180-06:00  INFO 509395 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-24T18:55:22.310-06:00  INFO 509395 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 1 Elasticsearch repository interfaces.
+2025-08-24T18:55:22.327-06:00  INFO 509395 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-24T18:55:22.329-06:00  INFO 509395 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-08-24T18:55:22.531-06:00  INFO 509395 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c81025c8-2b3e-321d-a9be-ef1705c9d4e0
+2025-08-24T18:55:22.796-06:00  INFO 509395 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2025-08-24T18:55:22.805-06:00  INFO 509395 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-24T18:55:22.805-06:00  INFO 509395 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2025-08-24T18:55:22.896-06:00  INFO 509395 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-24T18:55:22.897-06:00  INFO 509395 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1317 ms
+2025-08-24T18:55:23.490-06:00  WARN 509395 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.unir.mssearcher.repository.ProductSearchRepository
+2025-08-24T18:55:23.908-06:00  INFO 509395 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-08-24T18:55:23.966-06:00  WARN 509395 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-24T18:55:23.988-06:00  INFO 509395 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-08-24T18:55:24.088-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-08-24T18:55:24.092-06:00  INFO 509395 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-24T18:55:24.111-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-08-24T18:55:24.111-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-08-24T18:55:24.111-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-08-24T18:55:24.111-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-08-24T18:55:24.111-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-08-24T18:55:24.111-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-08-24T18:55:24.111-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-08-24T18:55:24.346-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-08-24T18:55:24.348-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-08-24T18:55:24.351-06:00  INFO 509395 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-08-24T18:55:24.357-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1756083324356 with initial instances count: 0
+2025-08-24T18:55:24.359-06:00  INFO 509395 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-SEARCHER with eureka with status UP
+2025-08-24T18:55:24.359-06:00  INFO 509395 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1756083324359, current=UP, previous=STARTING]
+2025-08-24T18:55:24.361-06:00  INFO 509395 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SEARCHER/fedora:ms-searcher:8082: registering service...
+2025-08-24T18:55:24.374-06:00  INFO 509395 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2025-08-24T18:55:24.375-06:00  INFO 509395 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2025-08-24T18:55:24.385-06:00  INFO 509395 --- [           main] c.unir.mssearcher.MsSearcherApplication  : Started MsSearcherApplication in 3.298 seconds (process running for 3.675)
+2025-08-24T18:55:24.403-06:00  INFO 509395 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-SEARCHER/fedora:ms-searcher:8082 - registration status: 204
+Producto indexado: Nike Air Max
+Producto indexado: Nike Running
+Producto indexado: Adidas Ultraboost
+Producto indexado: Puma RS-X
+Producto indexado: Nike Jordan
+✅ Datos iniciales cargados en Elasticsearch
+2025-08-24T18:55:54.349-06:00  INFO 509395 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-08-24T18:55:54.349-06:00  INFO 509395 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-08-24T18:55:54.349-06:00  INFO 509395 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-08-24T18:55:54.349-06:00  INFO 509395 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-08-24T18:55:54.349-06:00  INFO 509395 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-08-24T18:55:54.349-06:00  INFO 509395 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-08-24T18:55:54.349-06:00  INFO 509395 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-08-24T18:55:54.371-06:00  INFO 509395 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-08-24T18:56:10.235-06:00  INFO 509395 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-24T18:56:10.236-06:00  INFO 509395 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-24T18:56:10.237-06:00  INFO 509395 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-24T18:56:10.265-06:00  WARN 509395 --- [nio-8082-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.unir.mssearcher.controller.SearchController

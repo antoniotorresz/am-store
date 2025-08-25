@@ -1,0 +1,84 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.unir:discovery-server >----------------------
+[INFO] Building Discovery Server 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.0.6:run (default-cli) > test-compile @ discovery-server >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ discovery-server ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ discovery-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ discovery-server ---
+[INFO] skip non existing resourceDirectory /home/antonio/Documents/repos/am-store/backend/amstore/discovery-server/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ discovery-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.0.6:run (default-cli) < test-compile @ discovery-server <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.0.6:run (default-cli) @ discovery-server ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.6)
+
+2025-08-24T18:54:50.641-06:00  INFO 508833 --- [           main] c.u.d.DiscoveryServerApplication         : Starting DiscoveryServerApplication using Java 21.0.7 with PID 508833 (/home/antonio/Documents/repos/am-store/backend/amstore/discovery-server/target/classes started by antonio in /home/antonio/Documents/repos/am-store/backend/amstore/discovery-server)
+2025-08-24T18:54:50.646-06:00  INFO 508833 --- [           main] c.u.d.DiscoveryServerApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-08-24T18:54:52.691-06:00  INFO 508833 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=18c27b52-208b-3f7e-91c2-3ba606f88bb7
+2025-08-24T18:54:53.130-06:00  INFO 508833 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2025-08-24T18:54:53.147-06:00  INFO 508833 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-24T18:54:53.148-06:00  INFO 508833 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2025-08-24T18:54:53.337-06:00  INFO 508833 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-24T18:54:53.340-06:00  INFO 508833 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2560 ms
+2025-08-24T18:54:54.658-06:00  INFO 508833 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-08-24T18:54:54.662-06:00  INFO 508833 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-08-24T18:54:54.899-06:00  INFO 508833 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-08-24T18:54:54.899-06:00  INFO 508833 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-08-24T18:54:55.796-06:00  INFO 508833 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-08-24T18:54:55.839-06:00  WARN 508833 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-24T18:54:55.860-06:00  INFO 508833 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-08-24T18:54:55.880-06:00  INFO 508833 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-08-24T18:54:55.880-06:00  INFO 508833 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-08-24T18:54:55.887-06:00  INFO 508833 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1756083295885 with initial instances count: 0
+2025-08-24T18:54:55.920-06:00  INFO 508833 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-08-24T18:54:55.922-06:00  INFO 508833 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2025-08-24T18:54:56.043-06:00  INFO 508833 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-08-24T18:54:56.043-06:00  INFO 508833 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-08-24T18:54:56.043-06:00  INFO 508833 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-08-24T18:54:56.043-06:00  INFO 508833 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-08-24T18:54:56.293-06:00  INFO 508833 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2025-08-24T18:54:56.313-06:00  INFO 508833 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-08-24T18:54:56.316-06:00  INFO 508833 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-08-24T18:54:56.344-06:00  INFO 508833 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-08-24T18:54:56.413-06:00  INFO 508833 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DISCOVERY-SERVER with eureka with status UP
+2025-08-24T18:54:56.435-06:00  INFO 508833 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-08-24T18:54:56.436-06:00  INFO 508833 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-08-24T18:54:56.436-06:00  INFO 508833 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-08-24T18:54:56.436-06:00  INFO 508833 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-08-24T18:54:56.436-06:00  INFO 508833 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-08-24T18:54:56.462-06:00  INFO 508833 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-08-24T18:54:56.469-06:00  INFO 508833 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2025-08-24T18:54:56.471-06:00  INFO 508833 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-08-24T18:54:56.509-06:00  INFO 508833 --- [           main] c.u.d.DiscoveryServerApplication         : Started DiscoveryServerApplication in 6.729 seconds (process running for 7.335)
+2025-08-24T18:55:14.208-06:00  INFO 508833 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-24T18:55:14.208-06:00  INFO 508833 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-24T18:55:14.213-06:00  INFO 508833 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-08-24T18:55:14.692-06:00  INFO 508833 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-OPERATOR/fedora:MS-OPERATOR:8081 with status UP (replication=false)
+2025-08-24T18:55:15.414-06:00  INFO 508833 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-OPERATOR/fedora:MS-OPERATOR:8081 with status UP (replication=true)
+2025-08-24T18:55:24.401-06:00  INFO 508833 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-SEARCHER/fedora:ms-searcher:8082 with status UP (replication=false)
+2025-08-24T18:55:24.912-06:00  INFO 508833 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MS-SEARCHER/fedora:ms-searcher:8082 with status UP (replication=true)
+2025-08-24T18:55:32.258-06:00  INFO 508833 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/fedora:api-gateway:8080 with status UP (replication=false)
+2025-08-24T18:55:32.773-06:00  INFO 508833 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/fedora:api-gateway:8080 with status UP (replication=true)
+2025-08-24T18:55:56.438-06:00  INFO 508833 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-08-24T18:56:56.438-06:00  INFO 508833 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
