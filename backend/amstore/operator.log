@@ -91,3 +91,31 @@ Hibernate: create table products (id bigint not null auto_increment, cantidad in
 2025-08-25T20:58:19.749-06:00  INFO 54044 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 Hibernate: select p1_0.id,p1_0.cantidad,p1_0.category,p1_0.image,p1_0.price,p1_0.title from products p1_0
 2025-08-25T20:59:46.167-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:04:46.167-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:09:46.168-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:14:46.168-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:19:46.170-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:24:46.170-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:29:46.171-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:34:46.171-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:39:46.173-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:44:46.175-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:49:46.176-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select p1_0.id,p1_0.cantidad,p1_0.category,p1_0.image,p1_0.price,p1_0.title from products p1_0
+2025-08-25T21:54:46.177-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T21:59:46.177-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:04:46.178-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:09:46.179-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:14:46.180-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:19:46.180-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:24:46.181-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:29:46.182-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:34:46.182-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:39:46.182-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:44:46.183-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:49:46.183-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:54:46.184-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T22:59:46.184-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T23:04:46.185-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T23:09:46.185-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-25T23:14:46.185-06:00  INFO 54044 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
