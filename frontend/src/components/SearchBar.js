@@ -1,18 +1,58 @@
-import React, { useContext, useState } from "react";
-import { DataContext } from "../context/DataProvider";
-import { BiSearch, BiX } from "react-icons/bi"; // Importa íconos de react-icons
+import React, { useState } from "react";
+import { BiSearch, BiX } from "react-icons/bi"; // Import icons from react-icons
 
 const SearchBar = () => {
-  const { productos } = useContext(DataContext);
   const [searchTerm, setSearchTerm] = useState("");
+  const [filteredItems, setFilteredItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const items = productos[0];
+  // Debounce timer reference
+  let debounceTimer;
 
-  const filteredItems = items.filter((item) =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const handleSearch = async (query) => {
+    if (!query) {
+      setFilteredItems([]);
+      return;
+    }
 
-  const clearSearch = () => setSearchTerm("");
+    setIsLoading(true);
+
+    try {
+      const response = await fetch(
+        `http://localhost:8080/api/v1/search/products?query=${query}`
+      );
+      if (response.ok) {
+        const data = await response.json();
+        setFilteredItems(data); // Assuming the API returns an array of products
+      } else {
+        console.error("Error fetching search results");
+        setFilteredItems([]);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setFilteredItems([]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+
+    // Clear the previous debounce timer
+    clearTimeout(debounceTimer);
+
+    // Set a new debounce timer
+    debounceTimer = setTimeout(() => {
+      handleSearch(value);
+    }, 300); // Adjust the debounce delay as needed
+  };
+
+  const clearSearch = () => {
+    setSearchTerm("");
+    setFilteredItems([]);
+  };
 
   return (
     <div className="search-container">
@@ -22,7 +62,7 @@ const SearchBar = () => {
           type="text"
           placeholder="Buscar producto..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={handleInputChange}
           className="search-input"
         />
         {searchTerm && <BiX className="clear-icon" onClick={clearSearch} />}
@@ -30,11 +70,16 @@ const SearchBar = () => {
 
       {searchTerm && (
         <div className="search-results">
-          {filteredItems.length > 0 ? (
+          {isLoading ? (
+            <p>Cargando...</p>
+          ) : filteredItems.length > 0 ? (
             filteredItems.map((item) => (
               <div className="search-item" key={item.id}>
-                <img src={item.image} alt={item.title} width={50} />
-                <span>{item.title}</span>
+                <span className="item-name">{item.name}</span>
+                <span className="item-description">{item.description}</span>
+                <span className="item-price">${item.price.toFixed(2)}</span>
+                <span className="item-category">{item.category}</span>
+                <span className="item-stock">Stock: {item.stock}</span>
               </div>
             ))
           ) : (

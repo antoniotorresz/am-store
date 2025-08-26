@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect } from "react";
-import Data from "../Data2.js";
 
 export const DataContext = createContext();
 
@@ -9,16 +8,25 @@ export const DataProvider = (props) => {
 	const [carrito, setCarrito] =useState([])
 	const [total, setTotal] = useState(0)
 
-	console.log(carrito)
 
-  useEffect(() => {
-		const producto = Data.items 
-		if(producto){
-			setProductos(producto)
-		}else{
-			setProductos([])
-		}
-	}, []);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch("http://localhost:8080/api/v1/products");
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log(data)
+				setProductos(data);
+            } catch (error) {
+                console.error("Error fetching products:", error);
+                setProductos([]); // Fallback to an empty array in case of error
+            }
+        };
+
+        fetchData();
+    }, []);
 
 	const addCarrito = (id) =>{
 		const check = carrito.every(item =>{
